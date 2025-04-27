@@ -8,7 +8,7 @@ import com.Integracion.Biblioteca.Entities.Ticket;
 
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface TicketMapper {
-    
+
     Ticket toEntity(TicketDTO ticketDTO);
 
     TicketDTO toDTO(Ticket ticket);

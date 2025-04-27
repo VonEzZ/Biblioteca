@@ -2,6 +2,9 @@ package com.Integracion.Biblioteca.DTO;
 
 import java.time.LocalDate;
 
+import com.Integracion.Biblioteca.Entities.Estudiante;
+import com.Integracion.Biblioteca.Entities.Libro;
+
 import lombok.Getter;
 import lombok.Setter;
 

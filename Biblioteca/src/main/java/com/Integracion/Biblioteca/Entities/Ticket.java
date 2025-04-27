@@ -1,9 +1,6 @@
 package com.Integracion.Biblioteca.Entities;
 
 import java.time.LocalDate;
-
-import org.springframework.web.bind.annotation.SessionAttributes;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

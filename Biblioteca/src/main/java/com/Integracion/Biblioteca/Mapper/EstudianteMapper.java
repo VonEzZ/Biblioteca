@@ -10,8 +10,8 @@ import com.Integracion.Biblioteca.Entities.Estudiante;
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface EstudianteMapper {
 
-    Estudiante toEntity(EstudianteDTO dto);
+    Estudiante toEntity(EstudianteDTO estduianteDto);
 
-    EstudianteDTO toDTO(Estudiante entity);
+    EstudianteDTO toDTO(Estudiante estudiante);
 }
 

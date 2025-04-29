@@ -2,17 +2,19 @@ package com.Integracion.Biblioteca.Entities;
 
 import java.time.LocalDate;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Table(name = "Ticket")
 @Setter
 @Getter
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
+@Data
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +31,7 @@ public class Ticket {
     @JoinColumn(name = "Id", referencedColumnName = "id", nullable = false)
     private Estudiante matricula;
 
-    @ManyToOne
+    
     @JoinColumn(name = "ID_Libro", referencedColumnName = "id", nullable = false)
     private Libro id_libro;
 }

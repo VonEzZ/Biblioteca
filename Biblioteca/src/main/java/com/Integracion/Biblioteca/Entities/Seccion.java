@@ -23,4 +23,11 @@ public class Seccion {
 
     @Column(name = "ubicacion", nullable = false)
     private String ubicacion;
+    @ManyToOne
+    private Seccion seccion;
+
+    public void setSeccion(Seccion seccion) {
+        this.seccion = seccion;
+    }
+
 }

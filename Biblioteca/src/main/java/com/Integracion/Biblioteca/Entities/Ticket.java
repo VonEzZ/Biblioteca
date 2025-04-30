@@ -26,12 +26,21 @@ public class Ticket {
     @Column(name = "Fecha_Regreso", nullable = false)
     private LocalDate fechaRegreso;
 
-    // Relacion entre las tablas
     @ManyToOne
-    @JoinColumn(name = "Id", referencedColumnName = "id", nullable = false)
-    private Estudiante matricula;
+    @JoinColumn(name = "estudiante_id")
+    private Estudiante estudiante;
 
-    
-    @JoinColumn(name = "ID_Libro", referencedColumnName = "id", nullable = false)
-    private Libro id_libro;
+    @ManyToOne
+    @JoinColumn(name = "libro_id")
+    private Libro libro;
+
+    // Getters y Setters:
+    public void setEstudiante(Estudiante estudiante) {
+        this.estudiante = estudiante;
+    }
+
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
+
 }

@@ -33,9 +33,6 @@ public class Estudiante {
     @Column(nullable = false, length = 50)
     private String carrera;
 
-    public String getId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getId'");
-    }
+    
 }
 

@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SeccionRepository extends JpaRepository<Seccion, Long> {
     boolean existsByNombre(String nombre);
+    
+    Seccion findByNombre(String nombre);
+
 }

@@ -35,6 +35,10 @@ public class Libro {
     @Column(nullable = false, unique = false)
     private Long IdSeccion;
 
+    @ManyToOne
+    @JoinColumn(name = "id_seccion", referencedColumnName = "id", nullable = false)
+    private Seccion seccion;
+
 
 
 }

@@ -40,8 +40,8 @@ public class TicketServiceImpl implements ITicketService {
         Ticket ticket = new Ticket();
         ticket.setFechaPrestamo(ticketDTO.getFechaPrestamo());
         ticket.setFechaRegreso(ticketDTO.getFechaRegreso());
-        ticket.setMatricula(estudianteRepository.findById(ticketDTO.getMatriculaId()).orElse(null));
-        ticket.setId_libro(libroRepository.findById(ticketDTO.getLibroId()).orElse(null));
+        ticket.setEstudiante(ticketDTO.getEstudiante());
+        ticket.setLibro(ticketDTO.getLibro());
         return convertToDTO(ticketRepository.save(ticket));
     }
 
@@ -52,8 +52,8 @@ public class TicketServiceImpl implements ITicketService {
             return null;
         ticket.setFechaPrestamo(ticketDTO.getFechaPrestamo());
         ticket.setFechaRegreso(ticketDTO.getFechaRegreso());
-        ticket.setMatricula(estudianteRepository.findById(ticketDTO.getMatriculaId()).orElse(null));
-        ticket.setId_libro(libroRepository.findById(ticketDTO.getLibroId()).orElse(null));
+        ticket.setEstudiante(ticketDTO.getEstudiante());
+        ticket.setLibro(ticketDTO.getLibro());
         return convertToDTO(ticketRepository.save(ticket));
     }
 
@@ -67,8 +67,8 @@ public class TicketServiceImpl implements ITicketService {
         dto.setId(ticket.getId());
         dto.setFechaPrestamo(ticket.getFechaPrestamo());
         dto.setFechaRegreso(ticket.getFechaRegreso());
-        dto.setMatriculaId(ticket.getMatricula().getId());
-        dto.setLibroId(ticket.getId_libro().getId());
+        dto.setEstudiante(ticket.getEstudiante());
+        dto.setLibro(ticket.getLibro());
         return dto;
     }
 }

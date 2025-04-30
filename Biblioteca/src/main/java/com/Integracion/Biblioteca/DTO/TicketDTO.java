@@ -1,20 +1,19 @@
 package com.Integracion.Biblioteca.DTO;
 
+import lombok.Data;
 import java.time.LocalDate;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.Integracion.Biblioteca.Entities.Estudiante;
+import com.Integracion.Biblioteca.Entities.Libro;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class TicketDTO {
-
-    private long id;
-    private LocalDate fechaPrestamo; 
+    private Long id;
+    private Estudiante estudiante;
+    private Libro libro;
+    private LocalDate fechaPrestamo;
     private LocalDate fechaRegreso;
-    private String matriculaId;
- 
-    private Long libroId; 
+   
+
 }
+
